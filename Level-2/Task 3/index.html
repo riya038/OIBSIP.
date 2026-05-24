@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Pro | Professional To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ TaskFlow Pro</h1>
+            <p>Stay organized, boost productivity</p>
+        </div>
+
+        <!-- Statistics Cards -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>📊 Total Tasks</h3>
+                <div class="stat-number" id="totalTasks">0</div>
+                <div class="stat-label">All time</div>
+            </div>
+            <div class="stat-card">
+                <h3>⏳ Pending</h3>
+                <div class="stat-number" id="pendingCount">0</div>
+                <div class="stat-label">Tasks to do</div>
+            </div>
+            <div class="stat-card">
+                <h3>✅ Completed</h3>
+                <div class="stat-number" id="completedCount">0</div>
+                <div class="stat-label">Tasks done</div>
+            </div>
+        </div>
+
+        <!-- Add Task Section -->
+        <div class="add-task-container">
+            <div class="add-task">
+                <div class="input-wrapper">
+                    <input type="text" id="taskInput" placeholder="What needs to be done?">
+                </div>
+                <button id="addBtn">
+                    <span>➕</span> Add Task
+                </button>
+            </div>
+        </div>
+
+        <!-- Tasks Grid -->
+        <div class="tasks-grid">
+            <!-- Pending Tasks -->
+            <div class="task-section">
+                <div class="section-header">
+                    <h2>
+                        <span>⏳</span> Pending Tasks
+                    </h2>
+                    <span class="section-badge" id="pendingBadge">0</span>
+                </div>
+                <ul id="pendingList" class="task-list"></ul>
+            </div>
+
+            <!-- Completed Tasks -->
+            <div class="task-section">
+                <div class="section-header">
+                    <h2>
+                        <span>✅</span> Completed Tasks
+                    </h2>
+                    <span class="section-badge" id="completedBadge">0</span>
+                </div>
+                <ul id="completedList" class="task-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

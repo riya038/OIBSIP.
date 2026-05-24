@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureFlow | Authentication System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="auth-container" id="authContainer">
+        <div class="brand">
+            <h1>🔐 SecureFlow</h1>
+            <p>Authentication • Role-based zone</p>
+        </div>
+        <div class="card">
+            <div class="toggle-bar">
+                <button class="toggle-btn active" id="loginTabBtn">🔑 Login</button>
+                <button class="toggle-btn" id="registerTabBtn">📝 Register</button>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <div id="loginFormPanel" class="form-panel active-panel">
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label>📧 Email address</label>
+                        <input type="email" id="loginEmail" placeholder="hello@secure.com" autocomplete="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label>🔒 Password</label>
+                        <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Access secured area →</button>
+                    <div id="loginMessage" class="info-message" style="display: none;"></div>
+                </form>
+                <div class="link-note">Demo: demo@example.com / demo123</div>
+            </div>
+
+            <!-- REGISTER FORM -->
+            <div id="registerFormPanel" class="form-panel">
+                <form id="registerForm">
+                    <div class="input-group">
+                        <label>👤 Full name</label>
+                        <input type="text" id="regName" placeholder="Alex Johnson" autocomplete="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>📧 Email address</label>
+                        <input type="email" id="regEmail" placeholder="hello@secure.com" autocomplete="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label>🔒 Password (min. 6 chars)</label>
+                        <input type="password" id="regPassword" placeholder="Create strong password" autocomplete="new-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">📝 Create account</button>
+                    <div id="registerMessage" class="info-message" style="display: none;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECURED PAGE -->
+    <div id="securedOverlay" class="secured-overlay">
+        <div class="secured-card">
+            <span style="font-size: 3rem;">✅</span>
+            <h2>Secure Dashboard</h2>
+            <p>Welcome, <strong id="secureUserName">User</strong>! <br> You have successfully passed authentication.</p>
+            <div class="badge" id="secureUserEmail">authorized@access.io</div>
+            <p style="font-size: 0.9rem;">🔒 This is a protected zone. Sensitive resources are encrypted and only visible after login.</p>
+            <hr>
+            <button id="logoutBtn" class="btn-logout">🚪 Sign out</button>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
