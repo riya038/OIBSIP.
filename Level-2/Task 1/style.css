@@ -1,0 +1,154 @@
+:root {
+    --bg-gradient-start: #121212;
+    --bg-gradient-end: #2d2d2d;
+    --calc-bg: rgba(255, 255, 255, 0.05);
+    --calc-border: rgba(255, 255, 255, 0.1);
+    --calc-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --display-color: #f8fafc;
+    --display-secondary-color: #94a3b8;
+    --btn-bg: rgba(255, 255, 255, 0.05);
+    --btn-bg-hover: rgba(255, 255, 255, 0.15);
+    --btn-active: rgba(255, 255, 255, 0.25);
+    --btn-color: #e2e8f0;
+    --operator-color: #38bdf8;
+    --operator-bg: rgba(56, 189, 248, 0.1);
+    --operator-hover: rgba(56, 189, 248, 0.2);
+    --equals-bg: #3b82f6;
+    --equals-hover: #2563eb;
+    --clear-color: #f43f5e;
+    --clear-bg: rgba(244, 63, 94, 0.1);
+    --clear-hover: rgba(244, 63, 94, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.calculator-container {
+    padding: 20px;
+}
+
+.calculator {
+    background: var(--calc-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--calc-border);
+    border-radius: 24px;
+    box-shadow: var(--calc-shadow);
+    width: 320px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.display {
+    padding: 30px 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 120px;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--calc-border);
+}
+
+.previous-operand {
+    color: var(--display-secondary-color);
+    font-size: 1.1rem;
+    min-height: 1.5rem;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+.current-operand {
+    color: var(--display-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 20px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background: var(--btn-bg);
+    color: var(--btn-color);
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 18px 0;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn:hover {
+    background: var(--btn-bg-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    background: var(--btn-active);
+    transform: translateY(0);
+}
+
+.btn-operator {
+    color: var(--operator-color);
+    background: var(--operator-bg);
+}
+
+.btn-operator:hover {
+    background: var(--operator-hover);
+}
+
+.btn-clear, .btn-delete {
+    color: var(--clear-color);
+    background: var(--clear-bg);
+}
+
+.btn-clear:hover, .btn-delete:hover {
+    background: var(--clear-hover);
+}
+
+.btn-clear {
+    grid-column: span 2;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.btn-equals {
+    background: var(--equals-bg);
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-equals:hover {
+    background: var(--equals-hover);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}

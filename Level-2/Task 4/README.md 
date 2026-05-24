@@ -1,0 +1,59 @@
+# SecureFlow – Authentication System
+
+SecureFlow is a simple and secure authentication web application built using HTML, CSS, and JavaScript.
+
+This project includes Login and Registration functionality with a protected dashboard interface.
+
+---
+
+## 🚀 Features
+
+- User Registration
+- User Login
+- Secure Session Handling
+- Protected Dashboard
+- Logout Functionality
+- LocalStorage User Data
+- SessionStorage Authentication
+- Responsive UI Design
+- Form Validation
+- Error & Success Messages
+
+---
+
+## 🛠 Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+
+---
+
+## 📂 Project Structure
+
+project-folder/
+
+├── index.html  
+├── styles.css  
+├── auth.js  
+└── README.md  
+
+---
+
+## ▶️ How to Run
+
+1. Download or clone the repository
+2. Open the project folder
+3. Run `index.html` in your browser
+
+---
+
+## 📚 Learning Outcomes
+
+- Authentication System Basics
+- LocalStorage & SessionStorage
+- Form Validation
+- DOM Manipulation
+- Event Handling
+- Responsive Web Design
+
